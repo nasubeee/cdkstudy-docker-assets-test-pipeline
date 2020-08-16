@@ -16,6 +16,9 @@ const stackEnv = {
     account: process.env.CDK_DEFAULT_ACCOUNT,
     region: process.env.CDK_DEFAULT_REGION
 };
+const githubOwnerName = app.node.tryGetContext("github_user");
+const sourceReposName = app.node.tryGetContext("repos_name");
+
 //==============================================================================
 // Get Context and define stack env end
 //==============================================================================
@@ -25,4 +28,6 @@ const pipeline = new PipelineStack(app, 'pipeline', {
     description: `${resourceName.systemName}`,
     env: stackEnv,
     resourceName: resourceName,
+    githubOwnerName: githubOwnerName,
+    sourceReposName: sourceReposName,
 });
