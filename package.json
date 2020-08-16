@@ -2,7 +2,7 @@
   "name": "cdk-docker-assets-test-pipeline",
   "version": "0.1.0",
   "bin": {
-    "cdk-docker-assets-test-pipeline": "bin/cdk-docker-assets-test-pipeline.js"
+    "cdk-docker-assets-test-pipeline": "bin/app.js"
   },
   "scripts": {
     "build": "tsc",
