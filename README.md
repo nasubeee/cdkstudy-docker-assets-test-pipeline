@@ -1,14 +1,17 @@
-# Welcome to your CDK TypeScript project!
+# CI/CD pipeline for CDK Docker Assets Test Project
 
-This is a blank project for TypeScript development with CDK.
+[CDK Docker Assets Test Project](https://github.com/nasubifujii/cdk-docker-assets-test)のCI/CD パイプライン.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
-## Useful commands
+![Architecture](./doc/architecture.svg)
 
- * `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
- * `npm run test`    perform the jest unit tests
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
+## Deploy方法
+
+CDKのコンテキストでGithubのリポジトリオーナーとリポジトリ名を与える．
+
+```sh
+cdk deploy -c github_user="オーナー名" -c repos_name="リポジトリ名"
+```
+
+Githubのアクセストークンは，事前にAWSアカウントのSSM Parameter Storeに，`パラメータ名: /github/"オーナー名"/access-token`で保管されているものを取得する実装とした．
+
