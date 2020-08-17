@@ -1,8 +1,8 @@
 {
   "name": "cdk-docker-assets-test-pipeline",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "bin": {
-    "cdk-docker-assets-test-pipeline": "bin/cdk-docker-assets-test-pipeline.js"
+    "cdk-docker-assets-test-pipeline": "bin/app.js"
   },
   "scripts": {
     "build": "tsc",
@@ -23,7 +23,9 @@
   "dependencies": {
     "@aws-cdk/aws-codebuild": "^1.59.0",
     "@aws-cdk/aws-codepipeline": "^1.59.0",
+    "@aws-cdk/aws-codepipeline-actions": "^1.59.0",
     "@aws-cdk/aws-iam": "^1.59.0",
+    "@aws-cdk/aws-s3": "^1.59.0",
     "@aws-cdk/core": "1.59.0",
     "source-map-support": "^0.5.16"
   }
