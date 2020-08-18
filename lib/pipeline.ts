@@ -32,6 +32,7 @@ export class PipelineStack extends cdk.Stack {
             assumedBy: new iam.ServicePrincipal(`codebuild.amazonaws.com`),
             managedPolicies: [
                 iam.ManagedPolicy.fromAwsManagedPolicyName(`AmazonEC2ContainerRegistryFullAccess`),
+                iam.ManagedPolicy.fromAwsManagedPolicyName(`AWSCloudFormationFullAccess`),
             ],
         });
 
